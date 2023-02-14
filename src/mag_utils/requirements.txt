@@ -1,0 +1,11 @@
+numpy
+pandas==1.2.3
+utm
+setuptools
+scipy==1.6.3
+sklearn
+matplotlib
+PyKrige
+h5py
+tifffile
+requests

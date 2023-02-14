@@ -1,0 +1,17 @@
+numpy
+pandas==1.2.3
+utm
+setuptools
+scipy==1.6.3
+sklearn
+matplotlib
+PyKrige
+mock
+h5py
+tifffile
+pytest
+requests
+gdal
+scikit-dsp-comm 
+Pillow
+tqdm

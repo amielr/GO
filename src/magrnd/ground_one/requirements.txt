@@ -1,0 +1,12 @@
+cycler==0.10.0
+gdal==3.2.2
+matplotlib==3.4.2
+numpy==1.20.3
+pykrige==1.6.1
+scikit-dsp-comm==2.0.1
+setuptools==58.2.0
+six==1.16.0
+sklearn==0.0
+ttkthemes==3.2.0
+utm==0.7.0
+scipy==1.6.3

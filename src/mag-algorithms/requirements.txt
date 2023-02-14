@@ -1,0 +1,13 @@
+numpy
+pandas
+utm
+scipy
+h5py
+opencv-python-headless
+mag_utils
+scikit-image
+utm
+h5py
+mag_utils
+scikit_dsp_comm
+pyswarms

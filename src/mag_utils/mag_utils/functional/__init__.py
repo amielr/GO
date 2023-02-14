@@ -1,0 +1,1 @@
+"""Contains the mag functions."""
