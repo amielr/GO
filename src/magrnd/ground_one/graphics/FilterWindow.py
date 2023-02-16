@@ -8,7 +8,7 @@ from matplotlib.backends.backend_tkagg import (FigureCanvasTkAgg, NavigationTool
 import numpy as np
 from magrnd.ground_one.data_processing.consts import GUI_THEME, FILTER_TITLE, BG_COLOR, \
     FG_COLOR, SAMPLE_RATE_HZ, DEFAULT_LOW_PASS_FILTER_FREQS, \
-    RANGE_SELECTOR_ALPHA
+    RANGE_SELECTOR_ALPHA, VISUALIZATIONS_ON1_OFF0
 from copy import deepcopy
 from mag_utils.mag_utils.functional.signal_processing import calculate_fft, lowpass_filter, highpass_filter, bandpass_filter
 
@@ -49,6 +49,9 @@ class FilterWindow:
         # apply initial default filtering
         self.selected_filter_type = "Low Pass"
         self.apply_filter(*DEFAULT_LOW_PASS_FILTER_FREQS)
+
+        ###################### Replacement
+        self.update_scan()
 
         # fix fft display
         self.fix_fft_graph()

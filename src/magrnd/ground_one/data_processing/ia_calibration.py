@@ -69,8 +69,6 @@ def apply_ia_calib(matrix, calib_file_path):
 
     else:  # create new calibration from scratch
         calibration_window = CalibrationWindow(calib_file_path)
-
-
         cropped_data = calibration_window.get_cropped_data()
 
         print("Performing Calibration...")
