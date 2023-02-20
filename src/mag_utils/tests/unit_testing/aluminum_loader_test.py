@@ -17,7 +17,7 @@ VERSION 20F1 : 1.2.05 Frequency : 25.00 Hz	Filter : 36
 
 
 def test_get_samples_from_file(mock_aluminum_file_text):
-    method_path = "mag_utils.loader.aluminum"
+    method_path = "mag_utils.mag_utils.mag_utils.mag_utils.loader.aluminum"
 
     open_mock = mock.mock_open(read_data=mock_aluminum_file_text)
 

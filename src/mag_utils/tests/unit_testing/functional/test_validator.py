@@ -107,7 +107,7 @@ def test_no_txt_error():
 def test_validate_invalid_widow(text_widow_with_wrong_line_mock):
     # check if when widow file is invalid the log file is full
 
-    method_path = "mag_utils.functional.validator"
+    method_path = "mag_utils.mag_utils.mag_utils.mag_utils.functional.validator"
 
     open_mock = mock.mock_open(read_data=text_widow_with_wrong_line_mock)
     expected_input_writelines = text_widow_with_wrong_line_mock.splitlines(keepends=True)
@@ -131,7 +131,7 @@ def test_validate_invalid_widow(text_widow_with_wrong_line_mock):
 
 
 def test_validate_valid_widow(text_widow_with_correct_line_mock):
-    method_path = "mag_utils.functional.validator"
+    method_path = "mag_utils.mag_utils.mag_utils.mag_utils.functional.validator"
 
     # check if when widow file is valid
     open_mock = mock.mock_open(read_data=text_widow_with_correct_line_mock)
@@ -147,7 +147,7 @@ def test_validate_valid_widow(text_widow_with_correct_line_mock):
 
 
 def test_validate_valid_base(text_base_with_correct_line_mock):
-    method_path = "mag_utils.functional.validator"
+    method_path = "mag_utils.mag_utils.mag_utils.mag_utils.functional.validator"
 
     # check if when base file is valid
     open_mock = mock.mock_open(read_data=text_base_with_correct_line_mock)

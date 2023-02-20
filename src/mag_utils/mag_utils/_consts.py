@@ -1,8 +1,8 @@
-"""The mag_utils constants."""
+"""The mag_utils.mag_utils.mag_utils.mag_utils constants."""
 from typing import Union, List
 import numpy as np
 
-# The version of mag_utils package
+# The version of mag_utils.mag_utils.mag_utils.mag_utils package
 mag_UTILS_VERSION = "3.2"
 
 # Set an object that include the types of the supported sequences' types.

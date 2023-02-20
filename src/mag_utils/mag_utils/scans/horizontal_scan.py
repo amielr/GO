@@ -92,7 +92,7 @@ class HorizontalScan(Scan):
 
         Examples:
             import matplotlib.pyplot as plt
-            from mag_utils.loader import blackwidow
+            from mag_utils.mag_utils.mag_utils.mag_utils.loader import blackwidow
 
             # Showing the plot.
             widow_path = "some/path/scan.txt"

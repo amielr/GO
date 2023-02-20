@@ -1,5 +1,5 @@
 cycler==0.10.0
-gdal==3.2.2
+gdal==3.4.3
 matplotlib==3.4.2
 numpy==1.20.3
 pykrige==1.6.1

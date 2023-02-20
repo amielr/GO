@@ -1,4 +1,4 @@
-"""Method/Subclass of Interpolation: old mag_utils v21 interpolation."""
+"""Method/Subclass of Interpolation: old mag_utils.mag_utils.mag_utils.mag_utils v21 interpolation."""
 import numpy as np
 from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.gaussian_process.kernels import RBF, RationalQuadratic as radQ
@@ -7,7 +7,7 @@ from .base import Interpolation
 
 
 class OldV21(Interpolation):
-    """Old mag_utils v21 interpolation."""
+    """Old mag_utils.mag_utils.mag_utils.mag_utils v21 interpolation."""
 
     def interpolate(self, x: np.ndarray, y: np.ndarray, b: np.ndarray, x_mesh: np.ndarray,
                     y_mesh: np.ndarray) -> InterpolatedScan:

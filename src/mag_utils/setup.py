@@ -13,7 +13,7 @@ with open('requirements.txt', 'r') as req_file:
 VERSION = mag_utils.__version__
 
 setuptools.setup(
-    name="mag_utils",
+    name="mag_utils.mag_utils.mag_utils.mag_utils",
     version=VERSION,
     author="SamurAI",
     description="All of mag utils in one package.",

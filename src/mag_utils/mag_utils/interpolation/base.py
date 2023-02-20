@@ -12,7 +12,7 @@ class Interpolation:
 
     Examples:
         # Import the registry
-            from mag_utils.interpolation.registry import interpolation_registry
+            from mag_utils.mag_utils.mag_utils.mag_utils.interpolation.registry import interpolation_registry
 
         # Set up interpolation method.
             interp = interpolation_registry["RBF"]()

@@ -15,3 +15,4 @@ gdal
 scikit-dsp-comm 
 Pillow
 tqdm
+skimage

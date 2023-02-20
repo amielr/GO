@@ -35,7 +35,7 @@ def mag_utils_wrapper_func(path_to_scan_file: Path, scan_type):
         GZ_DIR.mkdir()
 
     # hide logging
-    logger = logging.getLogger("mag_utils.functional.logger")
+    logger = logging.getLogger("mag_utils.mag_utils.mag_utils.mag_utils.functional.logger")
     logger.setLevel(logging.INFO)
 
     # perform validation of data
@@ -266,7 +266,7 @@ def load(scan_paths: list = None):
             scan = main_load.load(str(scan_path), validate=True)
 
             if isinstance(scan, AluminumManScan):
-                raise Exception("Aluminum man is not supported in mag_utils yet!")
+                raise Exception("Aluminum man is not supported in mag_utils.mag_utils.mag_utils.mag_utils yet!")
 
             # removing "validated" from the file name
             if VALIDATED_STR in scan.file_name:

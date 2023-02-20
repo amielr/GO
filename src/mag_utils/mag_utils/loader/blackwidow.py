@@ -225,7 +225,7 @@ def load_gz_scan(scan_path: str) -> HorizontalScan:
 
 def csv_loader(scan_path: str) -> HorizontalScan:
     """
-    Load HorizontalScan from csv/txt file that created from our(mag_utils) saver.
+    Load HorizontalScan from csv/txt file that created from our(mag_utils.mag_utils.mag_utils.mag_utils) saver.
 
     Look for structure and further information in save_as_csv.py.
 

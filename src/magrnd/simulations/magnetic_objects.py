@@ -5,7 +5,7 @@ from pathlib import Path
 from simulations.dipole_sims import create_magnetic_dipole_simulation as CLB
 
 # set up ground one to use local module instead of pip-installed version
-mag_utils_path = Path(__file__).absolute().parents[1] / "mag_utils"
+mag_utils_path = Path(__file__).absolute().parents[1] / "mag_utils.mag_utils.mag_utils.mag_utils"
 mag_algorithms_path = Path(__file__).absolute().parents[1] / "mag-algorithms"
 
 if mag_utils_path.exists() and str(mag_utils_path) not in sys.path:

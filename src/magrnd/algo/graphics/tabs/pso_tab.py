@@ -5,7 +5,7 @@ import numpy as np
 from matplotlib.widgets import RectangleSelector
 
 from .generic_tab import Tab
-from mag_utils.scans import HorizontalScan
+from mag_utils.mag_utils.scans import HorizontalScan
 from mag_algorithms.pso.pso import ParticleSwarmOptimization
 from mag_algorithms.loss.l2_loss import L2Loss
 from pso.pso_gui import get_bounds_by_coords

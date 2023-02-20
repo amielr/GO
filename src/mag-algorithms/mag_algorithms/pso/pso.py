@@ -7,7 +7,7 @@ from mag_algorithms.loss import Loss, L2Loss
 from mag_algorithms.pso.consts import OPTIONS, LOWER_BOUND_OFFSET, UPPER_BOUND_OFFSET, MU0, B_EXT
 from mag_algorithms.pso.simulate_dipole import Simulation
 from mag_algorithms.pso.utils import normalize_mag_scan
-from mag_utils.scans.horizontal_scan import HorizontalScan
+from mag_utils.mag_utils.scans.horizontal_scan import HorizontalScan
 
 
 class ParticleSwarmOptimization(Algorithm):

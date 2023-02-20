@@ -13,7 +13,7 @@ with open('requirements_dev.txt', 'r') as req_file:
 VERSION = mag_utils.__version__
 
 setuptools.setup(
-    name="mag_utils-dev",
+    name="mag_utils.mag_utils.mag_utils.mag_utils-dev",
     version=VERSION,
     author="SamurAI",
     description="Dev branch of the mag Utils package.",

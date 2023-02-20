@@ -8,8 +8,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from mag_algorithms.base_algo import Algorithm
-from mag_utils.algo_tools.convex_hull_grids import rectangular_convex_hull_grid
-from mag_utils.algo_tools.simulations import simulate_b_ax_from_dipole
+from mag_utils.mag_utils.algo_tools.convex_hull_grids import rectangular_convex_hull_grid
+from mag_utils.mag_utils.algo_tools.simulations import simulate_b_ax_from_dipole
 
 from tqdm import tqdm
 from scipy.fft import rfft2, irfft2

@@ -1,4 +1,4 @@
-"""Method/Subclass of Interpolation: old mag_utils idw."""
+"""Method/Subclass of Interpolation: old mag_utils.mag_utils.mag_utils.mag_utils idw."""
 import numpy as np
 from scipy.interpolate import Rbf
 from mag_utils.mag_utils.scans.interpolated_scan import InterpolatedScan
@@ -6,7 +6,7 @@ from .base import Interpolation
 
 
 class OldIdw(Interpolation):
-    """Old mag_utils idw interpolation."""
+    """Old mag_utils.mag_utils.mag_utils.mag_utils idw interpolation."""
 
     def interpolate(self, x: np.ndarray, y: np.ndarray, b: np.ndarray, x_mesh: np.ndarray,
                     y_mesh: np.ndarray) -> InterpolatedScan:

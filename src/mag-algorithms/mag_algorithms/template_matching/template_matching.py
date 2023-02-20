@@ -10,7 +10,7 @@ import pandas as pd
 import cv2 as cv
 
 from skimage.measure import label, regionprops
-from mag_utils.scans.horizontal_scan import HorizontalScan
+from mag_utils.mag_utils.scans.horizontal_scan import HorizontalScan
 from mag_algorithms.base_algo import Algorithm
 from mag_algorithms.template_matching.consts import Backend, DEFAULT_CORR
 from mag_algorithms.template_matching.utils import load_template_scan

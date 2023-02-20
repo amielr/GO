@@ -62,7 +62,7 @@ def fix_encoding(path):
         try:
             file_text = file.read()
         except UnicodeDecodeError:
-            warnings.warn("Could not read file using utf-8 encoding, falling back to mag_utils reader...")
+            warnings.warn("Could not read file using utf-8 encoding, falling back to mag_utils.mag_utils.mag_utils.mag_utils reader...")
 
         # if no problem with encoding, continue
         if not file_text.isascii():
