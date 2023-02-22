@@ -14,8 +14,8 @@ from magrnd.ground_one.graphics.Calibration_cut import start_calibration_search
 class CalibrationWindow:
     def __init__(self, path_to_calibration_file):
         self.indexes_event = Event()
-        # self.cut_calibration_part_from_scan(path_to_calibration_file)
-        self.cut_callibration_method2(path_to_calibration_file)
+        self.cut_calibration_part_from_scan(path_to_calibration_file)
+        # self.cut_callibration_method2(path_to_calibration_file)
 
     def cut_calibration_part_from_scan(self, path):
         # load IA raw data of a calibration scan
