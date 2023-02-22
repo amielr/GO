@@ -1,4 +1,4 @@
-"""PSO credit to ofri mike from gaza."""
+"""PSO credit to ofri mike."""
 import numpy as np
 import pyswarms as ps
 
@@ -8,6 +8,7 @@ from mag_algorithms.pso.consts import OPTIONS, LOWER_BOUND_OFFSET, UPPER_BOUND_O
 from mag_algorithms.pso.simulate_dipole import Simulation
 from mag_algorithms.pso.utils import normalize_mag_scan
 from mag_utils.mag_utils.scans.horizontal_scan import HorizontalScan
+from tqdm import tqdm
 
 
 class ParticleSwarmOptimization(Algorithm):
@@ -28,7 +29,7 @@ class ParticleSwarmOptimization(Algorithm):
             bounds: bounds for the PSO starting positions.
             bounds = (lower_bound, upper_bound)
             lower/upper bound = contains the particle's starting box's edges (x, y, z, mx, my, mz).
-            pso_iterations: if u want to run pso multiple time and get the best score.
+            pso_iterations: if u want to run pso multiple times and get the best score.
             n_iterations: how many steps the particles do
             n_particles: number of particles in the swarm
             loss: Loss function to use.
@@ -63,6 +64,7 @@ class ParticleSwarmOptimization(Algorithm):
         Returns:
             for example in case of 1 resource [x,y,z,mx,my,mz], shape (n_resource,6).
         """
+
         self.scan_b, self.scan_route = normalize_mag_scan(mag_scan)
         self.set_bounds()
         index_and_measurement, b_simulation = self.optimize()
