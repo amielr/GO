@@ -16,6 +16,12 @@ from tkinter import RIGHT, LEFT, TOP, Grid, BOTH, Menu
 import numpy as np
 from functools import partial
 
+from magrnd.ground_one.graphics.FilterWindow import FilterWindow
+from magrnd.ground_one.graphics.VolvoWindow import VolvoWindow
+
+
+
+
 
 def set_axes_theme(*axes):
     # set theme for each axis
@@ -65,9 +71,14 @@ class MainWindow:
 
         # add buttons
         self.construct_ui()
-
+        ############################################
+        FilterWindow(self)
+        VolvoWindow(self).apply_volvo()
         # display window
+
         self.root.mainloop()
+
+
 
     def draw_graphs(self):
         # plot height on right axis

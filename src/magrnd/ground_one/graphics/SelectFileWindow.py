@@ -32,4 +32,4 @@ class SelectFileWindow:
 
 if __name__ == "__main__":
     win = SelectFileWindow()
-    print(win.get_scan())
+    print("wind", win.get_scan())

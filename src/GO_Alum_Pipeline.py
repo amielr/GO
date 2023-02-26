@@ -12,4 +12,13 @@ from magrnd.ground_one.data_processing.buttons import view_base_station
 def load_file_and_calibration():
     select_file_window = SelectFileWindow()
 
+    print(f"our scans are: {type(select_file_window.scans)}, {select_file_window.scans}")
+    print(f"our scans are: {type(select_file_window.scans.a)}, {select_file_window.scans.a}")
+
+
+
+
+if __name__ == "__main__":
+    print("Hello world")
+    load_file_and_calibration()
 

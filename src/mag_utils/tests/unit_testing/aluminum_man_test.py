@@ -4,7 +4,7 @@ import datetime
 import numpy as np
 import pytest
 
-from mag_utils.scans.aluminum_man import AluminumManScan
+from mag_utils.mag_utils.scans.aluminum_man import AluminumManScan
 
 
 @pytest.fixture
