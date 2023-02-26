@@ -1,7 +1,7 @@
 from numpy.linalg import norm
 import numpy as np
 
-from mag_utils.algo_tools.np_wrappers import direction_amplitude_decomposition, dot_row_pairs
+from mag_utils.mag_utils.algo_tools.np_wrappers import direction_amplitude_decomposition, dot_row_pairs
 
 
 # For scalar sensors set b_ax to be the direction of Earth's magnetic field.
