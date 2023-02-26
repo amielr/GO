@@ -15,8 +15,6 @@ class CalibrationWindow:
     def __init__(self, path_to_calibration_file):
         self.indexes_event = Event()
         # self.cut_calibration_part_from_scan(path_to_calibration_file)
-
-
         self.cut_calibration_part_from_scan_using_automated_method(path_to_calibration_file)
 
     def cut_calibration_part_from_scan(self, path):

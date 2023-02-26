@@ -1,7 +1,7 @@
 """Algorithms class that all class is inherit."""
 from abc import ABC
 
-from mag_utils.scans.horizontal_scan import HorizontalScan
+from mag_utils.mag_utils.scans.horizontal_scan import HorizontalScan
 
 
 class Algorithm(ABC):

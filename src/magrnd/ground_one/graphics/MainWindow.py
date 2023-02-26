@@ -18,6 +18,8 @@ from functools import partial
 
 from magrnd.ground_one.graphics.FilterWindow import FilterWindow
 from magrnd.ground_one.graphics.VolvoWindow import VolvoWindow
+from mag_algorithms.mag_algorithms.pso.pso import ParticleSwarmOptimization
+
 
 
 
@@ -74,6 +76,15 @@ class MainWindow:
         ############################################
         FilterWindow(self)
         VolvoWindow(self).apply_volvo()
+        ############################################
+        # self.scan.interpolate("Nearest", 1, inplace = True)
+        # self.scan.plot()
+
+        pso = ParticleSwarmOptimization(n_particles=20)
+        out = pso.run(self.scan)
+
+        print(f"our out results are: {out}")
+
         # display window
 
         self.root.mainloop()
