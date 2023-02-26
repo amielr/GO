@@ -3,7 +3,7 @@ import json
 from tkinter.filedialog import askopenfilename
 from ttkthemes import ThemedTk
 from pathlib import Path
-from mag_utils.scans.horizontal_scan import HorizontalScan
+from mag_utils.mag_utils.scans.horizontal_scan import HorizontalScan
 from algo.consts import GUI_THEME, WINDOW_TITLE, FILE_NAME_FONT, TITLE_FONT
 from algo.graphics.tabs import ALGORITHM_TAB_LIST
 from tkinter.ttk import Label, Notebook

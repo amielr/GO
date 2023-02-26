@@ -1,5 +1,5 @@
 from ground_one.graphics.SelectFileWindow import SelectFileWindow
-from mag_utils.scans import HorizontalScan
+from mag_utils.mag_utils.scans import HorizontalScan
 from graphics.algui_window import Algui
 
 if __name__ == "__main__":

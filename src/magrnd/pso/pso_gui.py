@@ -7,8 +7,8 @@ import tkinter.filedialog
 from matplotlib.figure import Figure
 from matplotlib.widgets import RectangleSelector
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
-from mag_utils.scans import HorizontalScan
-from mag_utils.loader.main_load import load
+from mag_utils.mag_utils.scans import HorizontalScan
+from mag_utils.mag_utils.loader.main_load import load
 
 g1_path = str(Path(__name__).absolute().parents[1] / "ground_one")
 if g1_path not in sys.path:

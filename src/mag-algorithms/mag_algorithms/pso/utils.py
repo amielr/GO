@@ -1,6 +1,6 @@
 """Utils in the future insert to mag utils."""
 import numpy as np
-from mag_utils.scans.horizontal_scan import HorizontalScan
+from mag_utils.mag_utils.scans.horizontal_scan import HorizontalScan
 
 
 def normalize_mag_scan(mag_scan: HorizontalScan):

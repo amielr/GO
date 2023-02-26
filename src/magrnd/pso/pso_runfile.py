@@ -5,7 +5,7 @@ from pathlib import Path
 from copy import deepcopy
 from mag_algorithms.pso import pso
 from scan_tag_gui import ScanTagGui
-from mag_utils.scans import HorizontalScan
+from mag_utils.mag_utils.scans import HorizontalScan
 from pso_class import ParticleSwarmsSimulation
 from pso_gui import build_gui_pso, get_bounds_by_coords, cut_df_by_coords
 from simulations.dipole_sims import create_magnetic_dipole_simulation as simulate

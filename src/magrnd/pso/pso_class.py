@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import pyswarms as ps
-from mag_utils.loader import blackwidow
+from mag_utils.mag_utils.loader import blackwidow
 from tkinter.filedialog import askopenfile
 from ground_one.data_processing import magscan2df
 from simulations.dipole_sims import create_scan_matrix_from_gz, create_magnetic_dipole_simulation, MU0, B_EXT

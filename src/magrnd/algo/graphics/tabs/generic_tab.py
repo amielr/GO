@@ -6,7 +6,7 @@ from pathlib import Path
 from tkinter.filedialog import asksaveasfilename
 from tkinter.ttk import Notebook, Frame, Entry, Label, Button
 from algo.consts import FIELD_NAME_FONT, PARAMETER_ERROR_TITLE, PARAMETER_ERROR_MSG, BOTH, TB_COLOR, BG_COLOR, END
-from mag_utils.scans import HorizontalScan
+from mag_utils.mag_utils.scans import HorizontalScan
 from tkinter.messagebox import showerror
 from tkinter import Grid
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk

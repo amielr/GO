@@ -5,7 +5,7 @@ from sklearn.cluster import DBSCAN
 from scipy.spatial import Delaunay
 from tqdm import tqdm
 
-from mag_utils.scans.horizontal_scan import HorizontalScan
+from mag_utils.mag_utils.scans.horizontal_scan import HorizontalScan
 from mag_algorithms.base_algo import Algorithm
 from .utils import derivz, derivx, derivy, plot_ellipse, plot_clusters, calc_residual, geo_centers, mean_centers, \
     recursive_ellipse

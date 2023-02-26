@@ -1,7 +1,7 @@
 from tkinter.ttk import Notebook
 from .generic_tab import Tab
 from mag_algorithms.inversion import LMSInversion
-from mag_utils.scans import HorizontalScan
+from mag_utils.mag_utils.scans import HorizontalScan
 from ground_one.graphics.MainWindow import set_axes_theme
 
 

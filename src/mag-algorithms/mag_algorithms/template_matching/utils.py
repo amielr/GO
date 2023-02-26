@@ -8,9 +8,9 @@ import h5py
 import numpy as np
 
 import mag_utils.visualization.plotter as plotter
-from mag_utils.scans.interpolated_scan import InterpolatedScan
-from mag_utils.scans.horizontal_scan import HorizontalScan
-from mag_utils.scans.labeled_scan import LabeledScan
+from mag_utils.mag_utils.scans.interpolated_scan import InterpolatedScan
+from mag_utils.mag_utils.scans.horizontal_scan import HorizontalScan
+from mag_utils.mag_utils.scans.labeled_scan import LabeledScan
 from mag_algorithms.template_matching.consts import TOLERANCE
 
 
