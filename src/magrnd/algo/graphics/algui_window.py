@@ -4,12 +4,12 @@ from tkinter.filedialog import askopenfilename
 from ttkthemes import ThemedTk
 from pathlib import Path
 from mag_utils.mag_utils.scans.horizontal_scan import HorizontalScan
-from algo.consts import GUI_THEME, WINDOW_TITLE, FILE_NAME_FONT, TITLE_FONT
-from algo.graphics.tabs import ALGORITHM_TAB_LIST
+from magrnd.algo.consts import GUI_THEME, WINDOW_TITLE, FILE_NAME_FONT, TITLE_FONT
+from magrnd.algo.graphics.tabs import ALGORITHM_TAB_LIST
 from tkinter.ttk import Label, Notebook
 from tkinter import Menu
 import matplotlib.pyplot as plt
-from ground_one.loaders.mag_loader import load
+from magrnd.ground_one.loaders.mag_loader import load
 
 
 class Algui:

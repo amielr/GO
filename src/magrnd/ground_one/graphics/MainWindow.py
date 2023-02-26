@@ -16,6 +16,14 @@ from tkinter import RIGHT, LEFT, TOP, Grid, BOTH, Menu
 import numpy as np
 from functools import partial
 
+from magrnd.ground_one.graphics.FilterWindow import FilterWindow
+from magrnd.ground_one.graphics.VolvoWindow import VolvoWindow
+from mag_algorithms.mag_algorithms.pso.pso import ParticleSwarmOptimization
+
+
+
+
+
 
 def set_axes_theme(*axes):
     # set theme for each axis
@@ -65,9 +73,23 @@ class MainWindow:
 
         # add buttons
         self.construct_ui()
+        ############################################
+        FilterWindow(self)
+        VolvoWindow(self).apply_volvo()
+        ############################################
+        # self.scan.interpolate("Nearest", 1, inplace = True)
+        # self.scan.plot()
+
+        pso = ParticleSwarmOptimization(n_particles=20)
+        out = pso.run(self.scan)
+
+        print(f"our out results are: {out}")
 
         # display window
+
         self.root.mainloop()
+
+
 
     def draw_graphs(self):
         # plot height on right axis

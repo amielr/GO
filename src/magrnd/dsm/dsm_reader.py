@@ -5,10 +5,10 @@ import pandas as pd
 import scipy.interpolate
 from matplotlib import pyplot as plt
 from osgeo import gdal
-from mag_utils.loader.blackwidow import load_gz_scan
-from mag_utils.algo_tools.simulations import simulate_b_ax_from_dipole
-from mag_utils.algo_tools.convex_hull_grids import convex_hull_grid
-from mag_utils.scans import HorizontalScan
+from mag_utils.mag_utils.loader.blackwidow import load_gz_scan
+from mag_utils.mag_utils.algo_tools.simulations import simulate_b_ax_from_dipole
+from mag_utils.mag_utils.algo_tools.convex_hull_grids import convex_hull_grid
+from mag_utils.mag_utils.scans import HorizontalScan
 from tqdm import tqdm
 
 SPACING = 10

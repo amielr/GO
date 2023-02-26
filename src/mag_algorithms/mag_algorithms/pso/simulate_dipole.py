@@ -1,7 +1,7 @@
 """Simulate dipole."""
 import numpy as np
 
-from mag_algorithms.pso.consts import MU0, B_EXT
+from mag_algorithms.mag_algorithms.pso.consts import MU0, B_EXT
 
 
 class Simulation:

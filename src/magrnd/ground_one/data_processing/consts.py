@@ -2,6 +2,8 @@ from pathlib import Path
 import numpy as np
 import os
 
+
+VISUALIZATIONS_ON1_OFF0 = 0
 WINDOW_TITLE = "Ground One"
 IA_CONSTANT = 0.0175  # volt to Tesla
 IA_CALIB_INITIAL_VALUES = np.array([-1, -1, -1,
