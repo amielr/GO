@@ -20,9 +20,6 @@ from magrnd.ground_one.graphics.FilterWindow import FilterWindow
 from magrnd.ground_one.graphics.VolvoWindow import VolvoWindow
 
 
-
-
-
 def set_axes_theme(*axes):
     # set theme for each axis
     for ax in axes:
@@ -50,35 +47,45 @@ def set_toolbars_theme(*toolbars):
 
 
 class MainWindow:
-    def __init__(self, scan: HorizontalScan):
+
+
+    def __init__(self, scan: HorizontalScan, guiless=False):
+        """
+    :param
+    scan: HorizontalScan: A HorizontalScan object (the scan after load)
+    guiless = when True, opens geotiff window without gui. for mor info visit playground.py
+
+        """
+
         self.scan = scan
+        self.guiless = guiless
 
         # delete cache if already exists
         if CACHE_DIR.exists():
             rmtree(CACHE_DIR)
 
-        # init window and include graphs in it
-        self.initialize_window()
+        if not self.guiless:
+            # init window and include graphs in it
+            self.initialize_window()
 
-        # cache scan
-        self.cache()
+            # cache scan
+            self.cache()
 
-        # draw graphs
-        self.draw_graphs()
+            # draw graphs
+            self.draw_graphs()
 
-        # create legend
-        self.create_interactive_legend()
+            # create legend
+            self.create_interactive_legend()
 
-        # add buttons
-        self.construct_ui()
-        ############################################
-        FilterWindow(self)
-        VolvoWindow(self).apply_volvo()
-        # display window
+            # add buttons
+            self.construct_ui()
+            ############################################
+            if not guiless:
+                FilterWindow(self)
+                VolvoWindow(self).apply_volvo()
+            # display window
 
-        self.root.mainloop()
-
-
+            self.root.mainloop()
 
     def draw_graphs(self):
         # plot height on right axis
@@ -161,6 +168,7 @@ class MainWindow:
         # display graphs on canvases
         self.left_canvas.get_tk_widget().pack(side=LEFT, fill=BOTH, expand=1)
         self.right_canvas.get_tk_widget().pack(side=RIGHT, fill=BOTH, expand=1)
+
 
     def save_bg(self, _):
         # saves the background of the plots for animated indicators
@@ -281,10 +289,15 @@ class MainWindow:
             help_menu.add_cascade(
                 label=help_str)
 
+################################
+
     def build_graphs(self):
         # save figs to attributes
         self.left_fig = plt.figure()  # the figure of the location and the magnetic field values
         self.right_fig = plt.figure()  # the figure of the location and the magnetic field values
+
+        if self.guiless:
+            plt.close('all')
 
         # save axes to attributes
         self.left_ax = self.left_fig.gca()
@@ -362,6 +375,7 @@ class MainWindow:
 
         # save as next file number
         save(self, CACHE_DIR / f"{file_num}.csv", is_interactive=False)
+
 
     def on_close(self):
         if CACHE_DIR.exists():

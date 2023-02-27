@@ -9,6 +9,7 @@ from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 UP_DISPLAY_OFFSET = 100
 
+
 def plot_horizontal_scan(x, y, c=None, ax: Axes = None, **kwargs):
     """
     Plots a scatter plot of the x,y points.
@@ -28,7 +29,7 @@ def plot_horizontal_scan(x, y, c=None, ax: Axes = None, **kwargs):
 
 
     """
-    show_colorbar = False
+    show_colorbar = True
 
     if 'center' in kwargs.keys():
         if kwargs['center']:
@@ -125,3 +126,32 @@ def plot_interpolated_scan(x, y, c, levels: int = 50, ax: Axes = None, **kwargs)
 
     return cont_output
 
+
+def plot_pso_output(x, y, target_x, target_y, ax: Axes = None, **kwargs):
+
+    show_colorbar = True
+
+    if ax is None:
+        plt.scatter(x, y, c=None, cmap='jet', **kwargs)
+        plt.scatter([[target_x]], [[target_y]], c="black")
+
+        plt.xlabel('x utm [m]')
+        plt.ylabel('y utm [m]')
+        plt.gca().axis('equal')
+
+        if show_colorbar:
+            plt.colorbar()
+        plt.show()
+        return None
+
+    ax.set_xlabel('x utm [m]')
+    ax.set_ylabel('y utm [m]')
+    ax.axis('equal')
+
+    scatter_out = ax.scatter(x, y, c=c, cmap='jet', **kwargs)
+
+    if show_colorbar:
+        divider = make_axes_locatable(ax)
+        cax = divider.append_axes('right', size='5%', pad=0.05)
+        plt.colorbar(scatter_out, cax=cax, orientation='vertical')
+    return scatter_out

@@ -117,6 +117,12 @@ class HorizontalScan(Scan):
         """
         return plotter.plot_horizontal_scan(self.x, self.y, self.b, ax, **kwargs)
 
+    def plot_pso(self, target_x, target_y):
+
+        return plotter.plot_pso_output(self.x, self.y, self.b,  float(target_x), float(target_y), ax, **kwargs)
+
+
+
     @overload
     def subtract_base(self, base_scan: BaseScan, inplace=False) -> 'HorizontalScan':
         ...

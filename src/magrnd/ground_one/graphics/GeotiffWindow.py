@@ -13,8 +13,9 @@ from mag_utils.mag_utils.functional.geotiff_utils import create_tiff
 
 
 class GeotiffWindow:
-    def __init__(self, window):
+    def __init__(self, window, guiless=False):
         self.main_window = window
+        self.guiless = guiless
 
         # set scan route state for the checkbox
         self.route_state = tk.IntVar()
@@ -175,7 +176,6 @@ class GeotiffWindow:
         # redraw geotiff
         self.draw_geotiff()
 
-    # TODO ask Mike if we need to stretch out the color scale when range is reduced
     def update_scale(self, *args):
         # calculate contour interval
         self.levels = int((self.max_val - self.min_val) / float(self.contour_interval_entry.get()))
