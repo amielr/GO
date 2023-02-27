@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from mag_utils.algo_tools.np_wrappers import center_columns
-from mag_utils.loader.main_load import load
-from mag_utils.scans.aluminum_man import AluminumManScan
+from mag_utils.mag_utils.algo_tools.np_wrappers import center_columns
+from mag_utils.mag_utils.loader.main_load import load
+from mag_utils.mag_utils.scans.aluminum_man import AluminumManScan
 
 from ground_one.data_processing.consts import IA_CONSTANT
 
