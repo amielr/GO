@@ -29,7 +29,7 @@ def find_optimized_parameters_for_calibration(GZ_cropped_calib_scan):
 
         std_val = np.std(np.sqrt(bx_cal ** 2 + by_cal ** 2 + bz_cal ** 2))
         print('std = ', std_val)
-        print('calibration parameters: \n', optimized_parameters)
+        print('calibration parameters: \n', initial_parameters)
 
     return initial_parameters
 

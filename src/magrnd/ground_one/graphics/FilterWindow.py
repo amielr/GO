@@ -141,7 +141,7 @@ class FilterWindow:
         # show legend
         self.signal_ax.legend(facecolor=FG_COLOR)
 
-        self.canvas.draw()
+        # self.canvas.draw()
 
     def fix_fft_graph(self):
         # set ax attributes
@@ -184,6 +184,7 @@ class FilterWindow:
         filtered_scan.b = self.filtered_signal + self.original_signal_mean  # add back the mean from the original signal
         self.main_window.set_scan(filtered_scan)
         self.filter_window.destroy()
+
 
 
 if __name__ == "__main__":

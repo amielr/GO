@@ -8,6 +8,7 @@ from mag_algorithms.mag_algorithms.pso.consts import OPTIONS, LOWER_BOUND_OFFSET
 from mag_algorithms.mag_algorithms.pso.simulate_dipole import Simulation
 from mag_algorithms.mag_algorithms.pso.utils import normalize_mag_scan
 from mag_utils.mag_utils.scans.horizontal_scan import HorizontalScan
+from matplotlib import pyplot as plt
 
 
 class ParticleSwarmOptimization(Algorithm):
@@ -70,6 +71,9 @@ class ParticleSwarmOptimization(Algorithm):
         if plot:
             temp_scan = mag_scan
             temp_scan.b = b_simulation
+            ######
+            plt.close("all")
+            ######
             temp_scan.plot()
 
         return {'x': index_and_measurement[0:, 0],

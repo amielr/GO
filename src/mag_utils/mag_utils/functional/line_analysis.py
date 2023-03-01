@@ -262,20 +262,47 @@ def substract_mean_by_dir(lines_indices, scan):
     Returns: magScan object that contains B values with mean substracted by direction.
 
     """
-    line_indices = np.array(lines_indices)
+    #lines_indices = [indice for indicelist in lines_indices for indice in indicelist for]
+    #line_indices = np.array(lines_indices)
+    print(f" Our line indices are: {lines_indices}")
     line_dirs = np.array([np.array([scan.x[line_ind[0]] - scan.x[line_ind[-1]],
                                     scan.y[line_ind[0]] - scan.y[line_ind[-1]]])
                           for line_ind in
-                          line_indices])
+                          lines_indices])
     major_1, major_2, _ = split_to_opposite_dirs(line_dirs)
-    m_1 = np.mean(np.concatenate([scan.b[line_ind]
-                                  for line_ind in line_indices[major_1]]).ravel())
-    m_2 = np.mean(np.concatenate([scan.b[line_ind]
-                                  for line_ind in line_indices[major_2]]).ravel())
 
-    for line_ind in line_indices[major_1]:
+    # major_1 = np.array(major_1)
+    # major_2 = np.array(major_2)
+
+    #lines_indices = np.array(lines_indices)
+    print(f"major1 and major2 {major_1} {major_2}")
+
+    mask = [True, False, True, False, True]
+
+    # Use a list comprehension to select the masked elements
+
+
+
+    #maskedlineindices = lines_indices[major_1]
+
+    # m_1 = np.mean(np.concatenate([scan.b[line_ind]
+    #                               for line_ind in lines_indices[major_1]]).ravel())
+    # m_2 = np.mean(np.concatenate([scan.b[line_ind]
+    #                               for line_ind in lines_indices[major_2]]).ravel())
+    lines_indices_major1 = [elem for elem, mask_elem in zip(lines_indices, major_1) if mask_elem]
+    print(f"lines_indices {lines_indices}")
+    m_1 = np.mean(np.concatenate([scan.b[line_ind]
+                                  for line_ind in lines_indices_major1]).ravel())
+
+
+    lines_indices_major2 = [elem for elem, mask_elem in zip(lines_indices, major_2) if mask_elem]
+    print(f"lines_indices {lines_indices}")
+    m_2 = np.mean(np.concatenate([scan.b[line_ind]
+                                  for line_ind in lines_indices_major2]).ravel())
+
+    for line_ind in lines_indices_major1:
         scan.b[line_ind] -= m_1
-    for line_ind in line_indices[major_2]:
+    for line_ind in lines_indices_major2:
         scan.b[line_ind] -= m_2
 
     return scan

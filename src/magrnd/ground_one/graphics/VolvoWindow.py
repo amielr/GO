@@ -39,8 +39,15 @@ class VolvoWindow:
 
         self.build_volvo_ui()
 
-        self.run_volvo()
 
+        self.run_volvo()
+        ################
+
+        # self.switch_mean_state()
+        # self.switch_mean_by_dir_state()
+        #
+        # self.run_volvo()
+    #############
     def initialize_window(self):
         self.volvo_window = ThemedTk(themebg=True)
         self.volvo_window.set_theme(GUI_THEME)
