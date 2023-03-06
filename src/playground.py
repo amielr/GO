@@ -18,6 +18,9 @@ pso = ParticleSwarmOptimization(n_particles=20, n_iterations=30)
 out = pso.run(scan)
 window = MainWindow(scan, guiless=True)
 
+"""
+
+"""
 plt.tricontour(scan.x, scan.y, scan.b, colors="black", linewidths=0.2, levels=10)
 plt.tricontour(scan.x, scan.y, scan.b, colors="black", linewidths=0.5, levels=2)
 plt.tricontourf(scan.x, scan.y, scan.b, cmap="jet", levels=50)
